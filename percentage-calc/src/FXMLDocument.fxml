@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="apMain" prefHeight="392.0" prefWidth="448.0" style="-fx-background-color: lavender;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+    <children>
+      <TitledPane alignment="CENTER" collapsible="false" layoutX="14.0" layoutY="182.0" prefHeight="147.0" prefWidth="421.0" text="Calculation Results">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TitledPane>
+      <TitledPane alignment="CENTER" collapsible="false" layoutX="14.0" layoutY="29.0" prefHeight="147.0" prefWidth="421.0" text="Data Input">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TitledPane>
+        <Label fx:id="lblInit" alignment="CENTER" layoutX="24.0" layoutY="82.0" minHeight="16" minWidth="69" text="Enter initial number:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="btnCalc" layoutX="282.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleAction_btnCalc" prefHeight="25.0" prefWidth="69.0" text="Calculate" />
+      <Button fx:id="btnClear" layoutX="365.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleAction_btnClear" prefHeight="25.0" prefWidth="69.0" text="Clear" />
+      <TextField fx:id="txtInit" layoutX="168.0" layoutY="80.0" onKeyTyped="#handle_txtInit" prefHeight="25.0" prefWidth="251.0" />
+      <TextField fx:id="txtPct" layoutX="168.0" layoutY="115.0" onKeyTyped="#handle_txtPct" prefHeight="25.0" prefWidth="251.0" />
+      <TextField fx:id="txtResult" layoutX="164.0" layoutY="267.0" onKeyTyped="#handle_txtResult" prefHeight="25.0" prefWidth="251.0" />
+      <TextField fx:id="txtNetPct" layoutX="164.0" layoutY="230.0" onKeyTyped="#handle_txtNetPct" prefHeight="25.0" prefWidth="251.0" />
+      <Label fx:id="lblPct" alignment="CENTER" layoutX="43.0" layoutY="117.0" minHeight="16" minWidth="69" text="Enter percentage:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetPct" alignment="CENTER" layoutX="49.0" layoutY="233.0" minHeight="16" minWidth="69" text="Net percentage:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblResult" alignment="CENTER" layoutX="103.0" layoutY="270.0" minHeight="16" minWidth="59.0" prefHeight="20.0" prefWidth="59.0" text="Result:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="362.0" text="made with JavaFX" />
+    </children>
+</AnchorPane>
