@@ -169,18 +169,27 @@ public class FXMLDocumentController implements Initializable {
          }
         });
     } 
+    /**
+     * Handles key events for the percentage input field. 
+     * This method updates the state of the UI based on the input 
+     * in the percentage field. It enables or disables buttons 
+     * and fields based on user input.
+     *
+     * @param event The KeyEvent triggered on the percentage input.
+     */
     @FXML
     private void handle_txtPct(KeyEvent event) {
-
+  // Clear and disable output fields when input changes
         txtNetPct.clear();
         txtNetPct.setDisable(true);
         txtResult.clear();
         txtResult.setDisable(true);
-        
+
+        // Add a listener to input changes
         txtPct.textProperty().addListener((observable, oldValue, newValue) -> { 
          
          if(newValue.isEmpty())
-         {
+         {// Disable percentage field and Clear button if initial field is empty
              if(txtInit.getText().isEmpty())
              {
                  txtPct.setDisable(true);
@@ -191,17 +200,18 @@ public class FXMLDocumentController implements Initializable {
              btnCalc.setDisable(true);
          }
          else if(newValue.length() != oldValue.length() && txtInit.getText().isEmpty())
-         {
+         { // Disable Calculate button if initial field is empty
              btnCalc.setDisable(true);
          }
          else
-         {
+         { // Enable Calculate button and Clear button
              btnCalc.setDisable(false);
              btnClear.setDisable(false);
          }
         });    
     }
 
+    // Empty methods for handling result and net percentage text field events
     @FXML
     private void handle_txtResult(KeyEvent event) {
     }
