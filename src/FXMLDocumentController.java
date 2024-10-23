@@ -89,28 +89,26 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleAction_btnCalc(ActionEvent event) {
         
-        /* local variable(s) definition */
+        // Local variable(s) definition
         float init, pct, netPct, result;
         
-        /* The Float.parseFloat(String s) method is used primarily in
-         * parsing a String method argument into a Float object
-         */
+        // Parse input text to float
         init = Float.parseFloat(txtInit.getText());
         pct = Float.parseFloat(txtPct.getText());
-        
+
+        // Calculate net percentage and total result
         netPct = (init * pct) / 100;
         result = init + netPct;
         
-        /* The Float.toString(Float f) method takes float value
-         * and converts it into the string representation of it.
-         */
+        // Update output fields and UI states
         txtNetPct.setDisable(false);
         txtNetPct.setText(Float.toString(netPct));
         txtResult.setDisable(false);
         txtResult.setText(Float.toString(result));
-        btnCalc.setDisable(true);
+        btnCalc.setDisable(true); // Disable Calculate button after computation
     }
-      /**
+    
+    /**
      * Handles the action of the Clear button. This method is 
      * triggered when the Clear button is clicked. It clears all 
      * input fields and resets the states of the output fields 
@@ -118,10 +116,9 @@ public class FXMLDocumentController implements Initializable {
      *
      * @param event The ActionEvent triggered by clicking the Clear button.
      */
-    
     @FXML
     private void handleAction_btnClear(ActionEvent event) {
-
+ // Clear input and output fields
         txtInit.clear();
         txtPct.clear();
         txtPct.setDisable(true);
@@ -129,9 +126,16 @@ public class FXMLDocumentController implements Initializable {
         txtNetPct.setDisable(true);
         txtResult.clear();
         txtResult.setDisable(true);
-        btnClear.setDisable(true);
+        btnClear.setDisable(true); // Disable Clear button after clearing
     }
-    
+     /**
+     * Handles key events for the initial number input field. 
+     * This method updates the state of the UI based on the input 
+     * in the initial number field. It enables or disables buttons 
+     * and fields based on user input.
+     *
+     * @param event The KeyEvent triggered on the initial number input.
+     */
     @FXML
     private void handle_txtInit(KeyEvent event) {
         
