@@ -1,15 +1,16 @@
 /* 
- * File:   main.java
+ * File: FXMLDocumentController.java
  * Author: a.skiadopoulos
  *
  * Created on 08 Μαρτίου 2018, 16:54 μμ
  *
- *
- * JavaFX app: getPercentage
- * JavaFX scene graph: Scene Builder
- *
- * This is a simple program that calculates the net percentage of a
- * given number plus the total number (net percentage + initial number).
+ * Description:
+ * This file contains the implementation of the FXMLDocumentController class
+ * for a JavaFX application that calculates the net percentage of a 
+ * given initial number plus the total number (net percentage + initial number).
+ * The application includes a graphical user interface built with 
+ * JavaFX Scene Builder, allowing users to input numbers and 
+ * calculate the desired results seamlessly.
  */
 
 /* library import */
@@ -23,7 +24,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-
+/**
+ * FXMLDocumentController represents the controller for the FXMLDocument.
+ * It implements the Initializable interface, allowing it to initialize 
+ * UI components after they have been loaded.
+ */
 
 public class FXMLDocumentController implements Initializable {
     
