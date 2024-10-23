@@ -92,7 +92,15 @@ public class FXMLDocumentController implements Initializable {
         txtResult.setText(Float.toString(result));
         btnCalc.setDisable(true);
     }
-
+      /**
+     * Handles the action of the Clear button. This method is 
+     * triggered when the Clear button is clicked. It clears all 
+     * input fields and resets the states of the output fields 
+     * and buttons.
+     *
+     * @param event The ActionEvent triggered by clicking the Clear button.
+     */
+    
     @FXML
     private void handleAction_btnClear(ActionEvent event) {
 
