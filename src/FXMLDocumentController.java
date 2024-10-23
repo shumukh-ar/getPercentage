@@ -33,27 +33,27 @@ import javafx.scene.layout.AnchorPane;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Button btnCalc;
+    private Button btnCalc;   // Button for calculating the result
     @FXML
-    private Button btnClear;
+    private Button btnClear;    // Button for clearing the input fields
     @FXML
-    private TextField txtInit;
+    private TextField txtInit;    // Input field for the initial number
     @FXML
-    private TextField txtPct;
+    private TextField txtPct;     // Input field for the percentage
     @FXML
-    private TextField txtResult;
+    private TextField txtResult;   // Output field for the result 
     @FXML
-    private TextField txtNetPct;
+    private TextField txtNetPct;    // Output field for the net percentage
     @FXML
-    private Label lblInit;
+    private Label lblInit;     // Output field for the net percentage
     @FXML
-    private Label lblPct;
+    private Label lblPct;     // Label for percentage input
     @FXML
-    private Label lblNetPct;
+    private Label lblNetPct;    // Label for net percentage output
     @FXML
-    private Label lblResult;
+    private Label lblResult;      // Label for result output
     @FXML
-    private AnchorPane apMain;
+    private AnchorPane apMain;     // Main layout of the application
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
