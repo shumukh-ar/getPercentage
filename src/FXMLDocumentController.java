@@ -148,8 +148,8 @@ public class FXMLDocumentController implements Initializable {
         txtInit.textProperty().addListener((observable, oldValue, newValue) -> { 
         
          if(newValue.isEmpty())
-         {
-             if(txtPct.getText().isEmpty()) //checks if a text field is empty or not
+         {  // Disable percentage field and Clear button if initial field is empty
+             if(txtPct.getText().isEmpty()) 
              {
                  txtPct.setDisable(true);
                  btnClear.setDisable(true);
@@ -157,13 +157,13 @@ public class FXMLDocumentController implements Initializable {
              txtNetPct.clear();
              txtResult.clear();
              btnCalc.setDisable(true);
-         } // Disable percentage field and Clear button if initial field is empty
+         }  
          else if(newValue.length() != oldValue.length() && !txtPct.getText().isEmpty())
-         {
+         { // Enable Calculate button if both fields have input
              btnCalc.setDisable(false);
          }
          else
-         {
+         { // Enable percentage field and Clear button
              btnClear.setDisable(false);
              txtPct.setDisable(false);
          }
