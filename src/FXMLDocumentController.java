@@ -68,13 +68,13 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        btnCalc.setDisable(true);
-        btnClear.setDisable(true);
-        txtPct.setDisable(true);
-        txtNetPct.setEditable(false);
-        txtNetPct.setDisable(true);
-        txtResult.setEditable(false);
-        txtResult.setDisable(true);
+        btnCalc.setDisable(true);    // Disable the Calculate button initially
+        btnClear.setDisable(true);    // Disable the Clear button initially
+        txtPct.setDisable(true);       // Disable the Percentage input field initially
+        txtNetPct.setEditable(false);    // Make the Net Percentage output field read-only
+        txtNetPct.setDisable(true);       // Disable the Net Percentage output field initially
+        txtResult.setEditable(false);      // Make the Result output field read-only
+        txtResult.setDisable(true);       // Disable the Result output field initially
         // TODO
     }
 
