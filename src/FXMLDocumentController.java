@@ -138,23 +138,13 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     private void handle_txtInit(KeyEvent event) {
-        
+        // Clear and disable output fields when input changes
         txtNetPct.clear();
         txtNetPct.setDisable(true);
         txtResult.clear();
         txtResult.setDisable(true);
         
-        /* addListener() method: lets you add event handlers that are called
-         * whenever the value of a property changes.
-         *
-         * The change listener event handler is passed three arguments:
-         * - observable (the property whose value has changed).
-         * - oldValue (the previous value of the property).
-         * - newValue: (the new value).
-         *
-         * The change listener is called whenever the value of the property
-         * has been recalculated.
-         */ 
+         // Add a listener to input changes
         txtInit.textProperty().addListener((observable, oldValue, newValue) -> { 
         
          if(newValue.isEmpty())
@@ -167,7 +157,7 @@ public class FXMLDocumentController implements Initializable {
              txtNetPct.clear();
              txtResult.clear();
              btnCalc.setDisable(true);
-         }
+         } // Disable percentage field and Clear button if initial field is empty
          else if(newValue.length() != oldValue.length() && !txtPct.getText().isEmpty())
          {
              btnCalc.setDisable(false);
@@ -178,11 +168,10 @@ public class FXMLDocumentController implements Initializable {
              txtPct.setDisable(false);
          }
         });
-    }
-
+    } 
     @FXML
     private void handle_txtPct(KeyEvent event) {
-        
+
         txtNetPct.clear();
         txtNetPct.setDisable(true);
         txtResult.clear();
