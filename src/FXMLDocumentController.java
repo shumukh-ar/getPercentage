@@ -77,7 +77,15 @@ public class FXMLDocumentController implements Initializable {
         txtResult.setDisable(true);       // Disable the Result output field initially
         // TODO
     }
-
+/**
+     * Handles the action of the Calculate button. This method is 
+     * triggered when the Calculate button is clicked. It reads the 
+     * initial number and percentage from the input fields, computes the 
+     * net percentage, and displays both the net percentage and 
+     * the total result in their respective output fields.
+     *
+     * @param event The ActionEvent triggered by clicking the Calculate button.
+     */
     @FXML
     private void handleAction_btnCalc(ActionEvent event) {
         
