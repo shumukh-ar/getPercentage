@@ -54,7 +54,17 @@ public class FXMLDocumentController implements Initializable {
     private Label lblResult;      // Label for result output
     @FXML
     private AnchorPane apMain;     // Main layout of the application
-    
+    /**
+     * Initializes the controller class. This method is called after 
+     * the FXML components have been loaded. It sets up the initial 
+     * state of the GUI elements.
+     *   
+     * @param url The location used to resolve relative paths for 
+     *            the root object, or null if the location is not 
+     *            known.
+     * @param rb  The resources used to localize the root object, 
+     *            or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
